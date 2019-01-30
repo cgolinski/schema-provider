@@ -190,11 +190,17 @@ type Member {
   applicationStatus: ApplicationStatus!
 }
 
+type MainNavigationItem {
+  title: String!
+  url: String!
+}
+
 type Query {
   me: Member
   allNews(start: Int, count: Int): [NewsStory!]!
   currentDonationOptions: [DonationOption!]!
   allApplications: [Application!]!
+  mainNavigation: [MainNavigationItem!]!
 }
 
 type Mutation {
